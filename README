@@ -1,0 +1,21 @@
+Title : Assignment#7
+Author: Yujiro Nakanishi
+Class : CS470
+Date  : Apr.10
+
+*** Abstract ***
+The program is composed of 5 different sub-programs with each having different tasks; Load, Print, Change, Query, and Clean. 
+
+The purpose of each tasks are as follows: 
+
+Load    => responsible for loading the database from "sampleInput.txt" and storeing it to an array of struct. This will be the first program to be called, thus other programs assumes that Load has been already called. Load will assume that "sampleInput.txt" has no more than 20 student records and each record is in order of "Name", "ID", "Address", and "Telephone number".   
+
+Print   => prints the content of shared memories
+
+Query   => prints the content of specific student information by getting the student ID that user wants to query. 
+
+Change  => this is a program for advisor to change data with a student with given student ID. Password is needed and it's always "000". If the password is correct, they can modify the information of students. Typing "NA" leave the information as it is, and typing otherwise will set the student information to what user typed. Since the size of array of character of each element in struct StudentInfo is 50, user must type in character with length that will not violate this assumption. 
+
+Clean   => program for advisor to save the contents of the shared memory to a file, in a same format that "sampleInput.txt" had. The output file is created with a name "output.txt". Shared memory as well as semaphores created in other programs will be destroyed.  
+
+
